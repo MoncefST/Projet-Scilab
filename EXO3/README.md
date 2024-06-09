@@ -129,6 +129,31 @@ pie([populationAfrique, populationAmeriqueDuNord, populationAmeriqueDuSud, popul
 
 **Résultat :**
 
-![Répartition de la surface terrestre](img/ex1-4-1.png)
+- Hommes :
 
-![Répartition de la population](img/ex1-4-2.png)
+    - Quartiles : [Q1, Q2 (médiane), Q3] = [75000, 120000, 170000]
+    - Interquartile Range (IQR) : QH(3) - QH(1) = 95000
+    - Minimum : 350
+    - Maximum : 250000
+    - Moyenne : 121389.87
+    - Médiane : 120000
+    - Écart-type : 52092.726
+
+    ![q4-homme](img/q4-homme.png)
+
+
+- Femmes :
+
+    - Quartiles : [Q1, Q2 (médiane), Q3] = [60000, 105000, 150000]
+    - Interquartile Range (IQR) : QF(3) - QF(1) = 90000
+    - Minimum : 500
+    - Maximum : 220000
+    - Moyenne : 107889.00
+    - Médiane : 105000
+    - Écart-type : 52723.610
+
+    ![q4-fille](img/q4-fille.png)
+
+---
+
+[⬅️](../EXO2/ "Exercice précédent (Exercice 2)") | [🏠](../ "Retour au sommaire") | [➡️](../EXO4/ "Exercice suivant (Exercice 4)")

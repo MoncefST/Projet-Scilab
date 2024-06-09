@@ -51,7 +51,7 @@ ylabel("Fréquence");
 
 **Résultat :**
 
-- ![histogramme](img/histogramme.png)
+![histogramme](img/histogramme.png)
 
 
 ---

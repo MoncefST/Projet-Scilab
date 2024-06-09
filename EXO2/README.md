@@ -80,11 +80,67 @@ unique_vals = unique(age);
 freq = histc(ages, unique_vals);
 [max_freq, max_index] = max(freq);
 age_mode = unique_vals(max_index);
+
+stdev(age)
 ```
 **Résultat :**
 
-- BIENTOT
+- Quartiles : [28, 32, 38]
+- Interquartile Range (IQR) : Q(3) - Q(1) = 10
+- Minimum : 21
+- Maximum : 62
+- Moyenne : 33.622033
+- Médiane : 32
+- Mode : 26
+- Écart type de l'âge : 7.6156456
 
+---
+
+## Question 4 : Boîte à moustaches pour l'âge {#q4}
+
+> A l'aide du paquet stixbox, tracez une boîte à moustaches pour l'âge.
+
+**[Script Scilab](scripts/q4.sce) :**
+
+```scilab
+boxplot(age);
+```
+**Résultat :**
+
+![q4](img/q4.png)
+
+---
+
+## Question 5 : Statistiques descriptives et boîte à moustaches pour l'expérience {#q5}
+
+> Refaire les questions précédentes pour l'expérience.
+
+**[Script Scilab](scripts/q5.sce) :**
+
+```scilab
+Q = quart(exp) 
+IQR = Q(3) - Q(1)
+min_xp = min(exp); 
+max_xp = max(exp); 
+mean(exp)
+median(exp)
+
+Unique_vals = unique(exp);
+Freq = histc(exp, Unique_vals);
+[max_Freq, max_Index] = max(Freq);
+exp_mode = Unique_vals(max_Index);
+
+stdev(exp)
+
+
+boxplot(exp);
+```
+**Résultat :**
+
+- Quartiles : []
+
+- 
+![q5](img/q5.png)
 
 ---
 

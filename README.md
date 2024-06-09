@@ -51,8 +51,12 @@ Le niveau d'éducation est codé par un entier :
 2. Tracez un nuage de points (salaire,expérince) et les droites de regression associées pour chaque niveau d'études. Commentaire ?
 
 
-## Authors
+## Auteurs
 
 - Moncef STITI : [@stiti](https://grond.iut-fbleau.fr/stiti)
 - Marco ORFAO : [@orfao](https://grond.iut-fbleau.fr/orfao)
+
+## Professeur
+
+- Denis MONNERAT : [@monnerat](https://grond.iut-fbleau.fr/monnerat)
 

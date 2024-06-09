@@ -13,7 +13,7 @@
 
 Pour cette exercice, veuillez initaliser les variables suivantes :
 
-**[Script Scilab](scripts/AREMPLIR.sce) :**
+**[Script Scilab](scripts/init.sce) :**
 
 ```scilab
 D = csvRead('data.csv');
@@ -27,7 +27,7 @@ genre = DD(:,3);
 
 > Donnez, sous forme d'histogramme, la distribution des salaires suivant le genre.
 
-**[Script Scilab](scripts/AREMPLIR.sce) :**
+**[Script Scilab](scripts/q1.sce) :**
 
 ```scilab
 D_homme = D(genre == 'Male',:);
@@ -51,7 +51,7 @@ ylabel("Fréquence");
 
 **Résultat :**
 
-![histogramme](img/histogramme.png)
+![histogrammes](img/histogrammes.png)
 
 
 ---

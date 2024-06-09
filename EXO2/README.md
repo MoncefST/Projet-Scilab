@@ -137,10 +137,16 @@ boxplot(exp);
 ```
 **Résultat :**
 
-- Quartiles : []
+- Quartiles : [3, 7, 12]
+- Interquartile : Q(3) - Q(1) = 9
+- Minimum : 0
+- Maximum : 34
+- Moyenne : 8.0950142
+- Médiane : 7
+- Mode : 1.5
+- Écart type : 6.0598534
 
-- 
-![q5](img/q5.png)
+- ![q5](img/q5.png)
 
 ---
 

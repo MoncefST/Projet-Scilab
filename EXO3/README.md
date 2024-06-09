@@ -103,7 +103,7 @@ boxplot(salaires)
 **Résultat :**
 
 - Quartiles : [Q1, Q2 (médiane), Q3] = [70000, 115000, 160000]
-- Interquartile Range (IQR) : Q(3) - Q(1);
+- Interquartile Range (IQR) : Q(3) - Q(1) = 90000
 - Minimum : 350
 - Maximum : 250000
 - Moyenne : 115326.96

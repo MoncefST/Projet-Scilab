@@ -146,7 +146,8 @@ boxplot(exp);
 - Mode : 1.5
 - Écart type : 6.0598534
 
-- ![q5](img/q5.png)
+- 
+![q5](img/q5.png)
 
 ---
 

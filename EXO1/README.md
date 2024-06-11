@@ -33,20 +33,12 @@ csvString = csvRead("data.csv",[],[],'string')          //ouvre data.csv en une 
 
 ```scilab
 genre = tabul(csvString(:,3),"i")                       //récupère la liste des genres ainsi que leur occurence
-        ->genre(1)                                      //liste les différents genres du tableau
-        ->genre(2)                                      //donne l'occurence correspondant aux valeurs de "genre(1)"
-    pie(genre(2),genre(1))                              //ouvre un diagramme camembert représentant les genres en fonction de leur occurence
+pie(genre(2),genre(1))                              //ouvre un diagramme camembert représentant les genres en fonction de leur occurence
 ```
 
 **Résultat :**
 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
+![q1](img/q1.png)
 
 ---
 
@@ -83,14 +75,7 @@ legend("homme","femme","autre")
 
 **Résultat :**
 
-
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
+![q2](img/q2.png)
 
 ---
 
@@ -113,14 +98,7 @@ legend(profession(indice(1:10)))                                    //légende l
 
 **Résultat :**
 
-
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
-# RESULTAT A AJOUTER ICI 
+![q3](img/q3.png)
 
 ---
 

@@ -175,25 +175,25 @@ mean(exp_p)                                             //13.915267
 
 **Résultat :**
 
-    - Niveau d'étude 0 :
-        - Salaire moyen : 36,706.69 $
-        - Âge moyen : 26.85 ans
-        - Expérience moyenne : 1.92 ans
+- Niveau d'étude 0 :
+    - Salaire moyen : 36,706.69 $
+    - Âge moyen : 26.85 ans
+    - Expérience moyenne : 1.92 ans
 
-    - Niveau d'étude 1 :
-        - Salaire moyen : 95,082.91 $
-        - Âge moyen : 30.26 ans
-        - Expérience moyenne : 5.42 ans
+- Niveau d'étude 1 :
+    - Salaire moyen : 95,082.91 $
+    - Âge moyen : 30.26 ans
+    - Expérience moyenne : 5.42 ans
 
-    - Niveau d'étude 2 :
-        - Salaire moyen : 130,112.06 $
-        - Âge moyen : 35.17 ans
-        - Expérience moyenne : 9.65 ans
+- Niveau d'étude 2 :
+    - Salaire moyen : 130,112.06 $
+    - Âge moyen : 35.17 ans
+    - Expérience moyenne : 9.65 ans
 
-    - Niveau d'étude 3 :
-        - Salaire moyen : 165,651.46 $
-        - Âge moyen : 41.15 ans
-        - Expérience moyenne : 13.92 ans
+- Niveau d'étude 3 :
+    - Salaire moyen : 165,651.46 $
+    - Âge moyen : 41.15 ans
+    - Expérience moyenne : 13.92 ans
 
 
 ---

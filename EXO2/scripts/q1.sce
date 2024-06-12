@@ -1,4 +1,2 @@
-age = D(:, 2);
-min_age = min(age); 
-max_age = max(age);  
-histplot(41,age);
+ages = tabul(csvDouble(:,2))
+bar(ages(:,1),ages(:,2))

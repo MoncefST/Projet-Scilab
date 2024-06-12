@@ -1,3 +1,2 @@
-D = csvRead('data.csv');
-DD = csvRead('data.csv',',','.','string');
-genre = DD(:,3);
+csvDouble = csvRead("data.csv")                         //ouvre data.csv en une matrice d'entier
+csvString = csvRead("data.csv",[],[],'string')          //ouvre data.csv en une matrice de string

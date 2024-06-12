@@ -17,9 +17,8 @@ Pour cette exercice, veuillez initaliser les variables suivantes :
 **[Script Scilab](scripts/init.sce) :**
 
 ```scilab
-D = csvRead('data.csv');
-DD = csvRead('data.csv',',','.','string');
-genre = DD(:,3);
+csvDouble = csvRead("data.csv")                         //ouvre data.csv en une matrice d'entier
+csvString = csvRead("data.csv",[],[],'string')          //ouvre data.csv en une matrice de string
 ```
 
 ---
@@ -31,10 +30,8 @@ genre = DD(:,3);
 **[Script Scilab](scripts/q1.sce) :**
 
 ```scilab
-age = D(:, 2);
-min_age = min(age); 
-max_age = max(age);  
-histplot(41,age);
+ages = tabul(csvDouble(:,2))
+bar(ages(:,1),ages(:,2))
 ```
 
 **Résultat :**
@@ -50,10 +47,8 @@ histplot(41,age);
 **[Script Scilab](scripts/q2.sce) :**
 
 ```scilab
-exp = D(:,6);
-min_xp = min(exp);
-max_xp = max(exp);
-histplot(34,exp);
+exp = tabul(csvDouble(:,6))
+bar(exp(:,1),exp(:,2))
 ```
 
 **Résultat :**
@@ -69,19 +64,18 @@ histplot(34,exp);
 **[Script Scilab](scripts/q3.sce) :**
 
 ```scilab
-Q = quart(age)
-IQR = Q(3) - Q(1) 
-min_age = min(age);
-max_age = max(age);
-mean(age)
-median(age)
+mean(csvDouble(:,2))        //moyenne
+min(csvDouble(:,2))         //min
+max(csvDouble(:,2))         //max
+median(csvDouble(:,2))      //médianne
+quart(csvDouble(:,2))       //quartile
+iqr(csvDouble(:,2))         //interquartile
+stdev(csvDouble(:,2))       //ecart-type
 
-unique_vals = unique(age);
-freq = histc(ages, unique_vals);
-[max_freq, max_index] = max(freq);
-age_mode = unique_vals(max_index);
-
-stdev(age)
+age = tabul(csvDouble(:,2))
+[occurence_tri,indice_tri] = gsort(age(:,2))
+liste_age = age(:,1)
+mode = liste_age(35)        //mode
 ```
 **Résultat :**
 
@@ -91,7 +85,7 @@ stdev(age)
 - Maximum : 62
 - Moyenne : 33.622033
 - Médiane : 32
-- Mode : 26
+- Mode : 27
 - Écart type de l'âge : 7.6156456
 
 ---
@@ -103,7 +97,14 @@ stdev(age)
 **[Script Scilab](scripts/q4.sce) :**
 
 ```scilab
-boxplot(age);
+// Installation de stibox
+atomsInstall("stixbox")
+
+// Lancement de stibox
+atomsLoad("stixbox")
+
+// Utilisation de stibox
+boxplot(csvDouble(:,2),"whisker",0.25,"orientation","horizontal")
 ```
 **Résultat :**
 
@@ -118,22 +119,22 @@ boxplot(age);
 **[Script Scilab](scripts/q5.sce) :**
 
 ```scilab
-Q = quart(exp) 
-IQR = Q(3) - Q(1)
-min_xp = min(exp); 
-max_xp = max(exp); 
-mean(exp)
-median(exp)
+mean(csvDouble(:,6))        //moyenne
+min(csvDouble(:,6))         //min
+max(csvDouble(:,6))         //max
+median(csvDouble(:,6))      //médianne
+quart(csvDouble(:,6))       //quartile
+iqr(csvDouble(:,6))         //interquartile
+stdev(csvDouble(:,6))       //ecart-type
 
-Unique_vals = unique(exp);
-Freq = histc(exp, Unique_vals);
-[max_Freq, max_Index] = max(Freq);
-exp_mode = Unique_vals(max_Index);
+exp = tabul(csvDouble(:,6))
+[occurence_tri,indice_tri] = gsort(exp(:,2))
+liste_exp = exp(:,1)
+mode = liste_exp(33)        //mode
 
-stdev(exp)
-
-
-boxplot(exp);
+atomsInstall("stixbox")
+atomsLoad("stixbox")
+boxplot(csvDouble(:,6),"whisker",0.25,"orientation","horizontal")
 ```
 **Résultat :**
 
@@ -143,7 +144,7 @@ boxplot(exp);
 - Maximum : 34
 - Moyenne : 8.0950142
 - Médiane : 7
-- Mode : 1.5
+- Mode : 2
 - Écart type : 6.0598534
 
 - 

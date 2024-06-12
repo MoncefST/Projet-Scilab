@@ -1,15 +1,16 @@
-Q = quart(exp) 
-IQR = Q(3) - Q(1)
-min_xp = min(exp); 
-max_xp = max(exp); 
-mean(exp)
-median(exp)
+mean(csvDouble(:,6))        //moyenne
+min(csvDouble(:,6))         //min
+max(csvDouble(:,6))         //max
+median(csvDouble(:,6))      //médianne
+quart(csvDouble(:,6))       //quartile
+iqr(csvDouble(:,6))         //interquartile
+stdev(csvDouble(:,6))       //ecart-type
 
-Unique_vals = unique(exp);
-Freq = histc(exp, Unique_vals);
-[max_Freq, max_Index] = max(Freq);
-exp_mode = Unique_vals(max_Index);
+exp = tabul(csvDouble(:,6))
+[occurence_tri,indice_tri] = gsort(exp(:,2))
+liste_exp = exp(:,1)
+mode = liste_exp(33)        //mode
 
-stdev(exp)
-
-boxplot(exp);
+atomsInstall("stixbox")
+atomsLoad("stixbox")
+boxplot(csvDouble(:,6),"whisker",0.25,"orientation","horizontal")

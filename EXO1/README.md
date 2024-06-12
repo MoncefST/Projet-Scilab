@@ -91,7 +91,7 @@ metiers = tabul(csvString(:,5),"i")                                 //récupère
 [occu,indice] = gsort(metiers(2))                                   //donne la liste des occurence trié ainsi que l'indice que son indice avant le tri
 profession = metiers(1)                                             //stock la liste des profession dans une variable
 matrice_occurence = [occu(1:1),occu(2:2),occu(3:3),occu(4:4),occu(5:5),occu(6:6),occu(7:7),occu(8:8),occu(9:9),occu(10:10)]
-bar(matrice_occurence)                                              //affiche l'histogramme des 10 professions avec le plus de monde
+bar(1,matrice_occurence)                                              //affiche l'histogramme des 10 professions avec le plus de monde
 legend(profession(indice(1:10)))                                    //légende le graphe pour donner un nom à chaque colonne
 
 ```
@@ -207,28 +207,28 @@ mean(exp_p)                                             //13.915267
 ```scilab
 indice_6_female = find(csvString(:,3) == "Female" )
 salaire_6_female = csvDouble(indice_6_female,7)
-mean(salaire_6_female)					                //107889.00
+mean(salaire_6_female)					                
 age_6_female = csvDouble(indice_6_female,2)
-mean(age_6_female)					                    //32.626286
+mean(age_6_female)					                    
 exp_6_female = csvDouble(indice_6_female,6)
-mean(exp_6_female)					                    //7.4201792
+mean(exp_6_female)					                    
 
 indice_6_male = find(csvString(:,3) == "Male" )
 salaire_6_male = csvDouble(indice_6_male,7)
-mean(salaire_6_male)					                //121389.87
+mean(salaire_6_male)					                
 age_6_male = csvDouble(indice_6_male,2)
-mean(age_6_male)					                    //34.416394
+mean(age_6_male)					                   
 exp_6_male = csvDouble(indice_6_male,6)
-mean(exp_6_male)					                    //8.6169662
+mean(exp_6_male)					                    
 
 
 indice_6_other = find(csvString(:,3) == "Other" )
 salaire_6_other = csvDouble(indice_6_other,7)
-mean(salaire_6_other)					                //125869.86
+mean(salaire_6_other)					                
 age_6_other = csvDouble(indice_6_other,2)
-mean(age_6_other)					                    //39.571429
+mean(age_6_other)					                    
 exp_6_other = csvDouble(indice_6_other,6)
-mean(exp_6_other)					                    //16.428571
+mean(exp_6_other)					                    
 ```
 
 **Résultat :**
@@ -248,6 +248,7 @@ mean(exp_6_other)					                    //16.428571
     - Âge moyen : 39.57 ans
     - Expérience moyenne : 16.43 ans
 
+⚠️ Les résultats sont arrondis ! ⚠️
 
 ---
 

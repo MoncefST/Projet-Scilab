@@ -93,7 +93,7 @@ title('Fréquences des niveaux d'etudes par genre');
 
 **Résultat :**
 
-![q2](img/q2.png)
+![q22222](img/q2222222222.png)
 
 ---
 

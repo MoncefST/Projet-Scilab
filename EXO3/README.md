@@ -16,9 +16,8 @@ Pour cette exercice, veuillez initaliser les variables suivantes :
 **[Script Scilab](scripts/init.sce) :**
 
 ```scilab
-D = csvRead('data.csv');
-DD = csvRead('data.csv',',','.','string');
-genre = DD(:,3);
+csvDouble = csvRead("data.csv")                         //ouvre data.csv en une matrice d'entier
+csvString = csvRead("data.csv",[],[],'string')          //ouvre data.csv en une matrice de string
 ```
 
 ---
@@ -27,31 +26,40 @@ genre = DD(:,3);
 
 > Donnez, sous forme d'histogramme, la distribution des salaires suivant le genre.
 
-**[Script Scilab](scripts/q1.sce) :**
+**[Script Scilab - hommes](scripts/q1-homme.sce) :**
 
 ```scilab
-D_homme = D(genre == 'Male',:);
-D_femme = D(genre == 'Female',:);
-salaire_homme = D_homme(:,7);
-salaire_femme = D_femme(:,7);
-num_bins = 50;
+id_male = find(csvString(:,3) == "Male" )
+salaire_male = csvDouble(id_male,7)
+histplot(10,salaire_male,normalization=%f)
+```
 
-subplot(2, 1, 1);
-histplot(num_bins, salaire_homme);
-title("Distribution des salaires pour les hommes");
-xlabel("Salaire");
-ylabel("Fréquence");
+**[Script Scilab - femmes](scripts/q1-femme.sce) :**
 
-subplot(2, 1, 2); 
-histplot(num_bins, salaire_femme);
-title("Distribution des salaires pour les femmes");
-xlabel("Salaire");
-ylabel("Fréquence");
+```scilab
+id_female = find(csvString(:,3) == "Female" )
+salaire_female = csvDouble(id_female,7)
+histplot(10,salaire_female,normalization=%f)
+```
+
+**[Script Scilab - autres](scripts/q1-autres.sce) :**
+
+```scilab
+id_other = find(csvString(:,3) == "Other" )
+salaire_other = csvDouble(id_other,7)
+histplot(10,salaire_other,normalization=%f)
 ```
 
 **Résultat :**
 
-![q1](img/q1.png)
+Hommes : 
+![q1](img/q1-homme.png)
+
+Femmes : 
+![q1](img/q1-femme.png)
+
+Autres : 
+![q1](img/q1-autres.png)
 
 ---
 
@@ -62,16 +70,28 @@ ylabel("Fréquence");
 **[Script Scilab](scripts/q2.sce) :**
 
 ```scilab
-niveau_etudes = D(:, 4);
-salaires = D(:, 7);
-unique_niveaux = unique(niveau_etudes);
-moy_salaire_par_niveau = zeros(size(unique_niveaux));
+indice_high = find(csvDouble(:,4) == 0 )
+salaire_high = csvDouble(indice_high,7)
+moy_h = mean(salaire_high)                                      
 
-for i = 1:length(unique_niveaux)
-    moy_salaire_par_niveau(i) = mean(salaires(niveau_etudes == unique_niveaux(i)));
-end
 
-bar(unique_niveaux, moy_salaire_par_niveau);
+indice_b = find(csvDouble(:,4) == 1 )
+salaire_b = csvDouble(indice_b,7)
+moy_b = mean(salaire_b)                                         
+
+
+indice_m = find(csvDouble(:,4) == 2 )
+salaire_m = csvDouble(indice_m,7)
+moy_m = mean(salaire_m)                                         
+
+
+indice_p = find(csvDouble(:,4) == 3)
+salaire_p = csvDouble(indice_p,7)
+moy_p = mean(salaire_p)                                         
+
+
+matrice = [moy_h,moy_b,moy_m,moy_p]
+bar([0,1,2,3],matrice)
 
 xlabel("Niveau d''études");
 ylabel("Salaire moyen");
@@ -91,14 +111,21 @@ title("Salaire moyen par niveau d''études");
 **[Script Scilab](scripts/q3.sce) :**
 
 ```scilab
-Q = quart(salaires)
-IQR = Q(3) - Q(1);
-min_salaire = min(salaires)
-max_salaire = max(salaires)
-mean(salaires)
-median(salaires)
-stdev(salaires)
-boxplot(salaires)
+mean(csvDouble(:,7))        //moyenne
+min(csvDouble(:,7))         //min
+max(csvDouble(:,7))         //max
+median(csvDouble(:,7))      //médianne
+quart(csvDouble(:,7))       //quartile
+iqr(csvDouble(:,7))         //interquartile
+stdev(csvDouble(:,7))       //ecart-type
+
+sal = tabul(csvDouble(:,7));
+[occurence_tri,indice_tri] = gsort(sal(:,2));
+liste_exp = sal(:,1);
+mode = liste_exp(200)        //mode
+
+atomsLoad("stixbox")
+boxplot(csvDouble(:,7),"orientation","horizontal")
 ```
 **Résultat :**
 
@@ -108,6 +135,7 @@ boxplot(salaires)
 - Maximum : 250000
 - Moyenne : 115326.96
 - Médiane : 115000
+- Mode : 140000
 - Écart-type : 52786.184
 
 ![q3](img/q3.png)
@@ -121,58 +149,62 @@ boxplot(salaires)
 **[Script Scilab](scripts/q4.sce) :**
 
 ```scilab
-QH = quart(salaire_homme)  
-QF = quart(salaire_femme)
-IQH = QH(3) - QH(1)   
-IQF = QF(3) - QF(1)
- min(salaire_homme)  
-min(salaire_femme)   
-max(salaire_homme)   
-max(salaire_femme)   
-mean(salaire_homme) 
-mean(salaire_femme)  
-median(salaire_homme) 
-median(salaire_femme)  
-stdev(salaire_homme) 
-stdev(salaire_femme) 
+MARCO ???
+MARCO ???
+MARCO ???
+MARCO ???
+MARCO ???
+MARCO ???
 
-// boite à moustache hommes : 
-boxplot(salaire_homme);
-title("Boîte à moustaches des salaires des hommes");
-ylabel("Salaires");
 
-// boite à moustache femmes : 
-boxplot(salaire_femme);
-title("Boîte à moustaches des salaires des femmes");
-ylabel("Salaires");
+MARCO ???
+MARCO ???MARCO ???MARCO ???
+MARCO ???
+MARCO ???
+MARCO ???
 ```
 
 **Résultat :**
 
 - Hommes :
 
-    - Quartiles : [Q1, Q2 (médiane), Q3] = [75000, 120000, 170000]
-    - Interquartile Range (IQR) : QH(3) - QH(1) = 95000
-    - Minimum : 350
-    - Maximum : 250000
-    - Moyenne : 121389.87
-    - Médiane : 120000
-    - Écart-type : 52092.726
+    - Quartiles : [Q1, Q2 (médiane), Q3] = [..., ..., ...]
+    - Interquartile Range (IQR) : QH(3) - QH(1) = ...
+    - Minimum : ...
+    - Maximum : ...
+    - Moyenne : ...
+    - Médiane : ...
+    - Écart-type : ...
 
     ![q4-homme](img/q4-homme.png)
 
 
 - Femmes :
 
-    - Quartiles : [Q1, Q2 (médiane), Q3] = [60000, 105000, 150000]
-    - Interquartile Range (IQR) : QF(3) - QF(1) = 90000
-    - Minimum : 500
-    - Maximum : 220000
-    - Moyenne : 107889.00
-    - Médiane : 105000
-    - Écart-type : 52723.610
+    - Quartiles : [Q1, Q2 (médiane), Q3] = [..., ..., ...]
+    - Interquartile Range (IQR) : QF(3) - QF(1) = ...
+    - Minimum : ...
+    - Maximum : ...
+    - Moyenne : ...
+    - Médiane : ...
+    - Écart-type : ...
 
-    ![q4-fille](img/q4-fille.png)
+    ![q4-femme](img/q4-femme.png)
+
+- Femmes :
+
+    - Quartiles : [Q1, Q2 (médiane), Q3] = [..., ..., ...]
+    - Interquartile Range (IQR) : QF(3) - QF(1) = ...
+    - Minimum : ...
+    - Maximum : ...
+    - Moyenne : ...
+    - Médiane : ...
+    - Écart-type : ...
+
+    ![q4-autres](img/q4-autres.png)
+
+- Commentaires : 
+...
 
 ---
 

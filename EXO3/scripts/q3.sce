@@ -1,8 +1,15 @@
-Q = quart(salaires)
-IQR = Q(3) - Q(1);
-min_salaire = min(salaires)
-max_salaire = max(salaires)
-mean(salaires)
-median(salaires)
-stdev(salaires)
-boxplot(salaires)
+mean(csvDouble(:,7))        //moyenne
+min(csvDouble(:,7))         //min
+max(csvDouble(:,7))         //max
+median(csvDouble(:,7))      //médianne
+quart(csvDouble(:,7))       //quartile
+iqr(csvDouble(:,7))         //interquartile
+stdev(csvDouble(:,7))       //ecart-type
+
+sal = tabul(csvDouble(:,7));
+[occurence_tri,indice_tri] = gsort(sal(:,2));
+liste_exp = sal(:,1);
+mode = liste_exp(200)        //mode
+
+atomsLoad("stixbox")
+boxplot(csvDouble(:,7),"orientation","horizontal")

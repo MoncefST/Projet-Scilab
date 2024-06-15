@@ -146,60 +146,102 @@ boxplot(csvDouble(:,7),"orientation","horizontal")
 
 > Refaire la question précédente, en distinguant les genres. Tracez une boîte à moustache pour chaque genre. Commentaires ?
 
-**[Script Scilab](scripts/q4.sce) :**
+**[Script Scilab - Autres](scripts/q4-autres.sce) :**
 
 ```scilab
-MARCO ???
-MARCO ???
-MARCO ???
-MARCO ???
-MARCO ???
-MARCO ???
+id_other = find(csvString(:,3) == "Other" )
+salaire_other = csvDouble(id_other,7)
+mean(salaire_other)        //moyenne
+min(salaire_other)         //min
+max(salaire_other)         //max
+median(salaire_other)      //médianne
+quart(salaire_other)       //quartile
+iqr(salaire_other)         //interquartile
+stdev(salaire_other)       //ecart-type
+sal = tabul(salaire_other);
+[occurence_tri,indice_tri] = gsort(sal(:,2));
+liste_sal = sal(:,1);
+mode = liste_sal(indice_tri(1))        //mode
+boxplot(salaire_female,"orientation","horizontal")
+```
 
+**[Script Scilab - Femmes](scripts/q4-femme.sce) :**
 
-MARCO ???
-MARCO ???MARCO ???MARCO ???
-MARCO ???
-MARCO ???
-MARCO ???
+```scilab
+id_female = find(csvString(:,3) == "Female" )
+salaire_female = csvDouble(id_female,7)
+mean(salaire_female)        //moyenne
+min(salaire_female)         //min
+max(salaire_female)         //max
+median(salaire_female)      //médianne
+quart(salaire_female)       //quartile
+iqr(salaire_female)         //interquartile
+stdev(salaire_female)       //ecart-type
+sal = tabul(salaire_female);
+[occurence_tri,indice_tri] = gsort(sal(:,2));
+liste_sal = sal(:,1);
+mode = liste_sal(indice_tri(1))        //mode
+boxplot(salaire_female,"orientation","horizontal")
+```
+
+**[Script Scilab - Hommes](scripts/q4-homme.sce) :**
+
+```scilab
+id_male = find(csvString(:,3) == "Male" )
+salaire_male = csvDouble(id_male,7)
+mean(salaire_male)        //moyenne
+min(salaire_male)         //min
+max(salaire_male)         //max
+median(salaire_male)      //médianne
+quart(salaire_male)       //quartile
+iqr(salaire_male)         //interquartile
+stdev(salaire_male)       //ecart-type
+sal = tabul(salaire_male);
+[occurence_tri,indice_tri] = gsort(sal(:,2));
+liste_sal = sal(:,1);
+mode = liste_sal(indice_tri(1))        //mode
+boxplot(salaire_male,"orientation","horizontal")
 ```
 
 **Résultat :**
 
 - Hommes :
 
-    - Quartiles : [Q1, Q2 (médiane), Q3] = [..., ..., ...]
-    - Interquartile Range (IQR) : QH(3) - QH(1) = ...
-    - Minimum : ...
-    - Maximum : ...
-    - Moyenne : ...
-    - Médiane : ...
-    - Écart-type : ...
+    - Quartiles : [Q1, Q2 (médiane), Q3] = [75000, 120000, 170000]
+    - Interquartile Range (IQR) : QH(3) - QH(1) = 95000
+    - Minimum : 350
+    - Maximum : 250000
+    - Moyenne : 121389.87
+    - Médiane : 120000
+    - Écart-type : 52092.726
+    - Mode : 140000
 
     ![q4-homme](img/q4-homme.png)
 
 
 - Femmes :
 
-    - Quartiles : [Q1, Q2 (médiane), Q3] = [..., ..., ...]
-    - Interquartile Range (IQR) : QF(3) - QF(1) = ...
-    - Minimum : ...
-    - Maximum : ...
-    - Moyenne : ...
-    - Médiane : ...
-    - Écart-type : ...
+    - Quartiles : [Q1, Q2 (médiane), Q3] = [60000, 105000, 150000]
+    - Interquartile Range (IQR) : QF(3) - QF(1) = 90000
+    - Minimum : 500
+    - Maximum : 220000
+    - Moyenne : 107889.00
+    - Médiane : 105000
+    - Écart-type : 52723.610
+    - Mode : 120000
 
     ![q4-femme](img/q4-femme.png)
 
-- Femmes :
+- Autres :
 
-    - Quartiles : [Q1, Q2 (médiane), Q3] = [..., ..., ...]
-    - Interquartile Range (IQR) : QF(3) - QF(1) = ...
-    - Minimum : ...
-    - Maximum : ...
-    - Moyenne : ...
-    - Médiane : ...
-    - Écart-type : ...
+    - Quartiles : [Q1, Q2 (médiane), Q3] = [69032, 158610, 161393]
+    - Interquartile Range (IQR) : QF(3) - QF(1) = 92361
+    - Minimum : 62852
+    - Maximum : 166109
+    - Moyenne : 125869.86
+    - Médiane : 158610
+    - Écart-type : 44242.383
+    - Mode : 158966
 
     ![q4-autres](img/q4-autres.png)
 

@@ -114,32 +114,18 @@ plot2d(salaire_p,y_reg,5)
 
 **Résultat :**
 
-<!-- Première paire d'images -->
 
-<div style="display: flex; justify-content: center;">
-    <div style="margin-right: 20px;">
-        <img src="img/q2-1.png" alt="Nuage de points pour le niveau d'étude n°1" width="400">
-        <p style="text-align: center;">Nuage de points pour le niveau d'étude n°1</p>
-    </div>
-    <div>
-        <img src="img/q2-2.png" alt="Nuage de points pour le niveau d'étude n°2" width="400">
-        <p style="text-align: center;">Nuage de points pour le niveau d'étude n°2</p>
-    </div>
-</div>
+- Nuage de points pour le niveau d'étude n°1 :
+![q2](img/q2-1.png)
 
-<!-- Deuxième paire d'images -->
+- Nuage de points pour le niveau d'étude n°2 :
+![q2](img/q2-2.png)
 
-<div style="display: flex; justify-content: center; margin-top: 20px;">
-    <div style="margin-right: 20px;">
-        <img src="img/q2-3.png" alt="Nuage de points pour le niveau d'étude n°3" width="400">
-        <p style="text-align: center;">Nuage de points pour le niveau d'étude n°3</p>
-    </div>
-    <div>
-        <img src="img/q2-4.png" alt="Nuage de points pour le niveau d'étude n°4" width="400">
-        <p style="text-align: center;">Nuage de points pour le niveau d'étude n°4</p>
-    </div>
-</div>
+- Nuage de points pour le niveau d'étude n°3 :
+![q2](img/q2-3.png)
 
+- Nuage de points pour le niveau d'étude n°4 :
+![q2](img/q2-4.png)
 
 - Commentaires : 
 

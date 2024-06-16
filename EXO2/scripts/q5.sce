@@ -14,3 +14,5 @@ mode = liste_exp(indice_tri(1))        //mode
 atomsInstall("stixbox")
 atomsLoad("stixbox")
 boxplot(csvDouble(:,6),"whisker",0.25,"orientation","horizontal");
+xlabel('Expérience');
+title('Boîte à moustaches de l''expérience');

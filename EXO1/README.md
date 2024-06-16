@@ -32,6 +32,23 @@ csvString = csvRead("data.csv",[],[],'string')          //ouvre data.csv en une 
 **[Script Scilab](scripts/q1.sce) :**
 
 ```scilab
+genre = tabul(csvString(:,3),"i")                       //récupère la liste des genres ainsi que leur occurence
+pie(genre(2),genre(1))                                  //ouvre un diagramme camembert représentant les genres en fonction de leur occurence
+```
+
+**Résultat :**
+
+![q1](img/q1.png)
+
+---
+
+## Question 2 : Répartition des niveaux d'études selon le genre {#q1}
+
+> Donnez sous forme d'histogramme la répartition des niveaux d'études, suivants le genre.
+
+**[Script Scilab](scripts/q2.sce) :**
+
+```scilab
 // Crée une matrice 6699x2 avec les genres et le niveau d'études
 genre_lvl = [csvString(:,3),csvString(:,4)];                                     
 

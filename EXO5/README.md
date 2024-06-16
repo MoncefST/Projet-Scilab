@@ -34,6 +34,9 @@ plot2d(salaire_male,exp_male,-1)
 [a,b] = reglin(salaire_male',exp_male')
 y_reg = a*salaire_male+b
 plot2d(salaire_male,y_reg,5)
+xlabel('Salaires');
+ylabel('Expérience');
+title('Nuage de points hommes');
 ```
 
 **[Script Scilab - Femmes](scripts/q1-femme.sce) :**
@@ -46,6 +49,9 @@ plot2d(salaire_female,exp_female,-1)
 [a,b] = reglin(salaire_female',exp_female')
 y_reg = a*salaire_female+b
 plot2d(salaire_female,y_reg,5)
+xlabel('Salaires');
+ylabel('Expérience');
+title('Nuage de points hommes');
 ```
 
 **Résultat :**
@@ -74,6 +80,9 @@ plot2d(salaire_high,exp_high,-1)
 [a,b] = reglin(salaire_high',exp_high')
 y_reg = a*salaire_high+b
 plot2d(salaire_high,y_reg,5)
+xlabel('Salaires');
+ylabel('Expérience');
+title('Nuage de points niveau d''étude 0');
 ```
 
 **[Script Scilab - Niveau d'étude n°2](scripts/q2-2.sce) :**
@@ -86,6 +95,9 @@ plot2d(salaire_b,exp_b,-1)
 [a,b] = reglin(salaire_b',exp_b')
 y_reg = a*salaire_b+b
 plot2d(salaire_b,y_reg,5)
+xlabel('Salaires');
+ylabel('Expérience');
+title('Nuage de points niveau d''étude 1');
 ```
 
 **[Script Scilab - Niveau d'étude n°3](scripts/q2-3.sce) :**
@@ -98,6 +110,9 @@ plot2d(salaire_m,exp_m,-1)
 [a,b] = reglin(salaire_m',exp_m')
 y_reg = a*salaire_m+b
 plot2d(salaire_m,y_reg,5)
+xlabel('Salaires');
+ylabel('Expérience');
+title('Nuage de points niveau d''étude 2');
 ```
 
 **[Script Scilab - Niveau d'étude n°4](scripts/q2-4.sce) :**
@@ -110,6 +125,9 @@ plot2d(salaire_p,exp_p,-1)
 [a,b] = reglin(salaire_p',exp_p')
 y_reg = a*salaire_p+b
 plot2d(salaire_p,y_reg,5)
+xlabel('Salaires');
+ylabel('Expérience');
+title('Nuage de points niveau d''étude 3');
 ```
 
 **Résultat :**

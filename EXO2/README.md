@@ -32,6 +32,9 @@ csvString = csvRead("data.csv",[],[],'string');          //ouvre data.csv en une
 ```scilab
 ages = tabul(csvDouble(:,2));
 bar(ages(:,1),ages(:,2));
+xlabel('Ages');
+ylabel('Effectifs');
+title('Distribution des âges');
 ```
 
 **Résultat :**
@@ -49,6 +52,9 @@ bar(ages(:,1),ages(:,2));
 ```scilab
 exp = tabul(csvDouble(:,6));
 bar(exp(:,1),exp(:,2));
+xlabel('Expérience');
+ylabel('Effectifs');
+title('Distribution de l''expérience');
 ```
 
 **Résultat :**
@@ -105,6 +111,8 @@ atomsLoad("stixbox")
 
 // Utilisation de stibox
 boxplot(csvDouble(:,2),"whisker",0.25,"orientation","horizontal");
+xlabel('Ages');
+title('Boîte à moustaches de l''âge');
 ```
 **Résultat :**
 
@@ -135,6 +143,8 @@ mode = liste_exp(33)        //mode
 atomsInstall("stixbox")
 atomsLoad("stixbox")
 boxplot(csvDouble(:,6),"whisker",0.25,"orientation","horizontal")
+xlabel('Expérience');
+title('Boîte à moustaches de l''expérience');
 ```
 **Résultat :**
 

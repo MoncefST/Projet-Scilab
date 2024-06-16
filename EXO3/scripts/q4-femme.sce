@@ -12,3 +12,5 @@ sal = tabul(salaire_female);
 liste_sal = sal(:,1);
 mode = liste_sal(indice_tri(1))        //mode
 boxplot(salaire_female,"orientation","horizontal")
+xlabel('Salaires');
+title('Boîte à moustache des salaires des femmes');

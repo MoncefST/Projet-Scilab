@@ -17,8 +17,8 @@ Pour cette exercice, veuillez initaliser les variables suivantes :
 **[Script Scilab](scripts/init.sce) :**
 
 ```scilab
-csvDouble = csvRead("data.csv")                         //ouvre data.csv en une matrice d'entier
-csvString = csvRead("data.csv",[],[],'string')          //ouvre data.csv en une matrice de string
+csvDouble = csvRead("data.csv");                         //ouvre data.csv en une matrice d'entier
+csvString = csvRead("data.csv",[],[],'string');          //ouvre data.csv en une matrice de string
 ```
 
 ---
@@ -30,8 +30,8 @@ csvString = csvRead("data.csv",[],[],'string')          //ouvre data.csv en une 
 **[Script Scilab](scripts/q1.sce) :**
 
 ```scilab
-ages = tabul(csvDouble(:,2))
-bar(ages(:,1),ages(:,2))
+ages = tabul(csvDouble(:,2));
+bar(ages(:,1),ages(:,2));
 ```
 
 **Résultat :**
@@ -47,8 +47,8 @@ bar(ages(:,1),ages(:,2))
 **[Script Scilab](scripts/q2.sce) :**
 
 ```scilab
-exp = tabul(csvDouble(:,6))
-bar(exp(:,1),exp(:,2))
+exp = tabul(csvDouble(:,6));
+bar(exp(:,1),exp(:,2));
 ```
 
 **Résultat :**
@@ -72,10 +72,10 @@ quart(csvDouble(:,2))       //quartile
 iqr(csvDouble(:,2))         //interquartile
 stdev(csvDouble(:,2))       //ecart-type
 
-age = tabul(csvDouble(:,2))
-[occurence_tri,indice_tri] = gsort(age(:,2))
-liste_age = age(:,1)
-mode = liste_age(35)        //mode
+age = tabul(csvDouble(:,2));
+[occurence_tri,indice_tri] = gsort(age(:,2));
+liste_age = age(:,1);
+mode = liste_age(indice_tri(1))        //mode
 ```
 **Résultat :**
 
@@ -104,7 +104,7 @@ atomsInstall("stixbox")
 atomsLoad("stixbox")
 
 // Utilisation de stibox
-boxplot(csvDouble(:,2),"whisker",0.25,"orientation","horizontal")
+boxplot(csvDouble(:,2),"whisker",0.25,"orientation","horizontal");
 ```
 **Résultat :**
 

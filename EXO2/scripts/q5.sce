@@ -6,11 +6,11 @@ quart(csvDouble(:,6))       //quartile
 iqr(csvDouble(:,6))         //interquartile
 stdev(csvDouble(:,6))       //ecart-type
 
-exp = tabul(csvDouble(:,6))
-[occurence_tri,indice_tri] = gsort(exp(:,2))
-liste_exp = exp(:,1)
-mode = liste_exp(33)        //mode
+exp = tabul(csvDouble(:,6));
+[occurence_tri,indice_tri] = gsort(exp(:,2));
+liste_exp = exp(:,1);
+mode = liste_exp(indice_tri(1))        //mode
 
 atomsInstall("stixbox")
 atomsLoad("stixbox")
-boxplot(csvDouble(:,6),"whisker",0.25,"orientation","horizontal")
+boxplot(csvDouble(:,6),"whisker",0.25,"orientation","horizontal");

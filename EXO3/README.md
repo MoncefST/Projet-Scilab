@@ -16,8 +16,8 @@ Pour cette exercice, veuillez initaliser les variables suivantes :
 **[Script Scilab](scripts/init.sce) :**
 
 ```scilab
-csvDouble = csvRead("data.csv")                         //ouvre data.csv en une matrice d'entier
-csvString = csvRead("data.csv",[],[],'string')          //ouvre data.csv en une matrice de string
+csvDouble = csvRead("data.csv");                         //ouvre data.csv en une matrice d'entier
+csvString = csvRead("data.csv",[],[],'string');          //ouvre data.csv en une matrice de string
 ```
 
 ---
@@ -29,25 +29,25 @@ csvString = csvRead("data.csv",[],[],'string')          //ouvre data.csv en une 
 **[Script Scilab - hommes](scripts/q1-homme.sce) :**
 
 ```scilab
-id_male = find(csvString(:,3) == "Male" )
-salaire_male = csvDouble(id_male,7)
-histplot(10,salaire_male,normalization=%f)
+id_male = find(csvString(:,3) == "Male" );
+salaire_male = csvDouble(id_male,7);
+histplot(10,salaire_male,normalization=%f);
 ```
 
 **[Script Scilab - femmes](scripts/q1-femme.sce) :**
 
 ```scilab
-id_female = find(csvString(:,3) == "Female" )
-salaire_female = csvDouble(id_female,7)
-histplot(10,salaire_female,normalization=%f)
+id_female = find(csvString(:,3) == "Female" );
+salaire_female = csvDouble(id_female,7);
+histplot(10,salaire_female,normalization=%f);
 ```
 
 **[Script Scilab - autres](scripts/q1-autres.sce) :**
 
 ```scilab
-id_other = find(csvString(:,3) == "Other" )
-salaire_other = csvDouble(id_other,7)
-histplot(10,salaire_other,normalization=%f)
+id_other = find(csvString(:,3) == "Other" );
+salaire_other = csvDouble(id_other,7);
+histplot(10,salaire_other,normalization=%f);
 ```
 
 **Résultat :**
@@ -70,28 +70,28 @@ Autres :
 **[Script Scilab](scripts/q2.sce) :**
 
 ```scilab
-indice_high = find(csvDouble(:,4) == 0 )
-salaire_high = csvDouble(indice_high,7)
-moy_h = mean(salaire_high)                                      
+indice_high = find(csvDouble(:,4) == 0 );
+salaire_high = csvDouble(indice_high,7);
+moy_h = mean(salaire_high);                             
 
 
-indice_b = find(csvDouble(:,4) == 1 )
-salaire_b = csvDouble(indice_b,7)
-moy_b = mean(salaire_b)                                         
+indice_b = find(csvDouble(:,4) == 1 );
+salaire_b = csvDouble(indice_b,7);
+moy_b = mean(salaire_b);                                         
 
 
-indice_m = find(csvDouble(:,4) == 2 )
-salaire_m = csvDouble(indice_m,7)
-moy_m = mean(salaire_m)                                         
+indice_m = find(csvDouble(:,4) == 2 );
+salaire_m = csvDouble(indice_m,7);
+moy_m = mean(salaire_m);                                         
 
 
-indice_p = find(csvDouble(:,4) == 3)
-salaire_p = csvDouble(indice_p,7)
-moy_p = mean(salaire_p)                                         
+indice_p = find(csvDouble(:,4) == 3);
+salaire_p = csvDouble(indice_p,7);
+moy_p = mean(salaire_p);                                         
 
 
-matrice = [moy_h,moy_b,moy_m,moy_p]
-bar([0,1,2,3],matrice)
+matrice = [moy_h,moy_b,moy_m,moy_p];
+bar([0,1,2,3],matrice);
 
 xlabel("Niveau d''études");
 ylabel("Salaire moyen");
@@ -122,10 +122,10 @@ stdev(csvDouble(:,7))       //ecart-type
 sal = tabul(csvDouble(:,7));
 [occurence_tri,indice_tri] = gsort(sal(:,2));
 liste_exp = sal(:,1);
-mode = liste_exp(200)        //mode
+mode = liste_exp(indice_tri(1))        //mode
 
-atomsLoad("stixbox")
-boxplot(csvDouble(:,7),"orientation","horizontal")
+atomsLoad("stixbox");
+boxplot(csvDouble(:,7),"orientation","horizontal");
 ```
 **Résultat :**
 
@@ -247,7 +247,7 @@ boxplot(salaire_male,"orientation","horizontal")
 
 - Commentaires : 
 ...
-
+les 3 diagrammes moustaches sembles être très similaires. Le placement de la médiane et des quartiles se confondent.
 ---
 
 [⬅️](../EXO2/ "Exercice précédent (Exercice 2)") | [🏠](../ "Retour au sommaire") | [➡️](../EXO4/ "Exercice suivant (Exercice 4)")

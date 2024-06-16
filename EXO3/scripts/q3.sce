@@ -9,7 +9,7 @@ stdev(csvDouble(:,7))       //ecart-type
 sal = tabul(csvDouble(:,7));
 [occurence_tri,indice_tri] = gsort(sal(:,2));
 liste_exp = sal(:,1);
-mode = liste_exp(200)        //mode
+mode = liste_exp(indice_tri(1))        //mode
 
-atomsLoad("stixbox")
-boxplot(csvDouble(:,7),"orientation","horizontal")
+atomsLoad("stixbox");
+boxplot(csvDouble(:,7),"orientation","horizontal");

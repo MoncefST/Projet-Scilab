@@ -14,9 +14,8 @@ Pour cette exercice, veuillez initaliser les variables suivantes :
 **[Script Scilab](scripts/init.sce) :**
 
 ```scilab
-D = csvRead('data.csv');
-DD = csvRead('data.csv',',','.','string');
-genre = DD(:,3);
+csvDouble = csvRead('data.csv');   
+csvString = csvRead('data.csv',[],[],'string');
 ```
 
 ---
@@ -28,12 +27,12 @@ genre = DD(:,3);
 **[Script Scilab](scripts/q1.sce) :**
 
 ```scilab
-X=csvDouble(:,7)
-Y=csvDouble(:,2)
-plot2d(X,Y,-1)
-[a,b] = reglin(X',Y')
-y_reg = a*X+b
-plot2d(X,y_reg,5)
+X=csvDouble(:,7);
+Y=csvDouble(:,2);
+plot2d(X,Y,-1);
+[a,b] = reglin(X',Y');
+y_reg = a*X+b;
+plot2d(X,y_reg,5);
 corrcoef(X,Y)
 ```
 
@@ -51,12 +50,12 @@ corrcoef(X,Y)
 **[Script Scilab](scripts/q2.sce) :**
 
 ```scilab
-X=csvDouble(:,7)
-Y=csvDouble(:,6)
-plot2d(X,Y,-1)
-[a,b] = reglin(X',Y')
-y_reg = a*X+b
-plot2d(X,y_reg,5)
+X=csvDouble(:,7);
+Y=csvDouble(:,6);
+plot2d(X,Y,-1);
+[a,b] = reglin(X',Y');
+y_reg = a*X+b;
+plot2d(X,y_reg,5);
 corrcoef(X,Y)
 ```
 

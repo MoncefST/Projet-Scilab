@@ -5,4 +5,4 @@ atomsInstall("stixbox")
 atomsLoad("stixbox")
 
 // Utilisation de stibox
-boxplot(csvDouble(:,2),"whisker",0.25,"orientation","horizontal")
+boxplot(csvDouble(:,2),"whisker",0.25,"orientation","horizontal");

@@ -57,7 +57,7 @@ plot2d(salaire_female,y_reg,5)
 ![q1](img/q1-femme.png)
 
 - Commentaire : 
-
+D'après les deux droites de régressions, lorsque l'on compare les hommes et les femmes, les femmes semblent avoir un meilleur salaire pour une expèrience moindre,
 ---
 
 ## Question 2 : Nuage de points et régression linéaire : Expérience vs Salaire par niveau d'études {#q2}
@@ -128,7 +128,7 @@ plot2d(salaire_p,y_reg,5)
 ![q2](img/q2-4.png)
 
 - Commentaires : 
-
+La répartition des points sur les 4 graphes sont assez similaires, les 4 droites sont donc quasiment identiques.
 ---
 
 [⬅️](../EXO4/ "Exercice précédent (Exercice 4)") | [🏠](../ "Retour au sommaire")

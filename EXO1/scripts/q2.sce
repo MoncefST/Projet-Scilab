@@ -54,4 +54,4 @@ bar(lvlEtude, temp);
 legend("homme", "femme", "autre");
 xlabel('Niveau de etude');
 ylabel('Fréquence');
-title('Fréquences des niveaux d'etudes par genre');
+title("Fréquences des niveaux d''etudes par genre");

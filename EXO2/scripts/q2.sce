@@ -1,2 +1,2 @@
-exp = tabul(csvDouble(:,6))
-bar(exp(:,1),exp(:,2))
+exp = tabul(csvDouble(:,6));
+bar(exp(:,1),exp(:,2));

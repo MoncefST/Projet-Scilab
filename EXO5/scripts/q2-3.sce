@@ -5,3 +5,6 @@ plot2d(salaire_m,exp_m,-1)
 [a,b] = reglin(salaire_m',exp_m')
 y_reg = a*salaire_m+b
 plot2d(salaire_m,y_reg,5)
+xlabel('Salaires');
+ylabel('Expérience');
+title('Nuage de points niveau d''étude 2');

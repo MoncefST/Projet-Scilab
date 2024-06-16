@@ -5,3 +5,6 @@ plot2d(salaire_female,exp_female,-1)
 [a,b] = reglin(salaire_female',exp_female')
 y_reg = a*salaire_female+b
 plot2d(salaire_female,y_reg,5)
+xlabel('Salaires');
+ylabel('Expérience');
+title('Nuage de points femmes');

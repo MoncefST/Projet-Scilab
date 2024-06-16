@@ -6,5 +6,5 @@ atomsLoad("stixbox")
 
 // Utilisation de stibox
 boxplot(csvDouble(:,2),"whisker",0.25,"orientation","horizontal");
-xlabel('Expérience');
-title('Boîte à moustaches de l''expérience');
+xlabel('Ages');
+title('Boîte à moustaches de l''âge');

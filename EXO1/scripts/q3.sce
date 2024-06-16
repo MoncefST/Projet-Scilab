@@ -4,3 +4,6 @@ profession = metiers(1);                                             //stock la 
 matrice_occurence = [occu(1:1),occu(2:2),occu(3:3),occu(4:4),occu(5:5),occu(6:6),occu(7:7),occu(8:8),occu(9:9),occu(10:10)];
 bar(1,matrice_occurence);                                              //affiche l'histogramme des 10 professions avec le plus de monde
 legend(profession(indice(1:10)));                                    //légende le graphe pour donner un nom à chaque colonne
+xlabel('Professions');
+ylabel('Effectifs');
+title('effectifs des 10 professions les plus représentées');

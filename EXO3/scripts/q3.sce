@@ -13,3 +13,5 @@ mode = liste_exp(indice_tri(1))        //mode
 
 atomsLoad("stixbox");
 boxplot(csvDouble(:,7),"orientation","horizontal");
+xlabel('Salaires');
+title('Boîte à moustache des salaires');

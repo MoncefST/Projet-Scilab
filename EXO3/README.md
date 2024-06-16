@@ -32,6 +32,9 @@ csvString = csvRead("data.csv",[],[],'string');          //ouvre data.csv en une
 id_male = find(csvString(:,3) == "Male" );
 salaire_male = csvDouble(id_male,7);
 histplot(10,salaire_male,normalization=%f);
+xlabel('Salaire');
+ylabel('Effectifs');
+title('Distribution des salaires pour les hommes');
 ```
 
 **[Script Scilab - femmes](scripts/q1-femme.sce) :**
@@ -40,6 +43,9 @@ histplot(10,salaire_male,normalization=%f);
 id_female = find(csvString(:,3) == "Female" );
 salaire_female = csvDouble(id_female,7);
 histplot(10,salaire_female,normalization=%f);
+xlabel('Salaire');
+ylabel('Effectifs');
+title('Distribution des salaires pour les femmes');
 ```
 
 **[Script Scilab - autres](scripts/q1-autres.sce) :**
@@ -48,6 +54,9 @@ histplot(10,salaire_female,normalization=%f);
 id_other = find(csvString(:,3) == "Other" );
 salaire_other = csvDouble(id_other,7);
 histplot(10,salaire_other,normalization=%f);
+xlabel('Salaires');
+ylabel('Effectifs');
+title('Distribution des salaires pour les autres');
 ```
 
 **Résultat :**
@@ -126,6 +135,8 @@ mode = liste_exp(indice_tri(1))        //mode
 
 atomsLoad("stixbox");
 boxplot(csvDouble(:,7),"orientation","horizontal");
+xlabel('Salaires');
+title('Boîte à moustache des salaires');
 ```
 **Résultat :**
 
@@ -162,7 +173,9 @@ sal = tabul(salaire_other);
 [occurence_tri,indice_tri] = gsort(sal(:,2));
 liste_sal = sal(:,1);
 mode = liste_sal(indice_tri(1))        //mode
-boxplot(salaire_female,"orientation","horizontal")
+boxplot(salaire_other,"orientation","horizontal")
+xlabel('Salaires');
+title('Boîte à moustache des salaires des autres');
 ```
 
 **[Script Scilab - Femmes](scripts/q4-femme.sce) :**
@@ -182,6 +195,8 @@ sal = tabul(salaire_female);
 liste_sal = sal(:,1);
 mode = liste_sal(indice_tri(1))        //mode
 boxplot(salaire_female,"orientation","horizontal")
+xlabel('Salaires');
+title('Boîte à moustache des salaires des femmes');
 ```
 
 **[Script Scilab - Hommes](scripts/q4-homme.sce) :**
@@ -201,6 +216,8 @@ sal = tabul(salaire_male);
 liste_sal = sal(:,1);
 mode = liste_sal(indice_tri(1))        //mode
 boxplot(salaire_male,"orientation","horizontal")
+xlabel('Salaires');
+title('Boîte à moustache des salaires des hommes');
 ```
 
 **Résultat :**

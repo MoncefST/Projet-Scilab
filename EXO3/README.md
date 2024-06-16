@@ -245,9 +245,7 @@ boxplot(salaire_male,"orientation","horizontal")
 
     ![q4-autres](img/q4-autres.png)
 
-- Commentaires : 
-...
-les 3 diagrammes moustaches sembles être très similaires. Le placement de la médiane et des quartiles se confondent.
+- Commentaires : Les 3 diagrammes moustaches sembles être très similaires. Le placement de la médiane et des quartiles se confondent.
 ---
 
 [⬅️](../EXO2/ "Exercice précédent (Exercice 2)") | [🏠](../ "Retour au sommaire") | [➡️](../EXO4/ "Exercice suivant (Exercice 4)")
